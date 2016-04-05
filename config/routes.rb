@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
 
   get 'sessions/new'
 
   get 'sessions/create'
 
   get 'sessions/delete'
-
-  root 'welcome#index'
 
   get "juices" => 'juices#index'
   get "juices/:id" => 'juices#show'
@@ -15,10 +14,7 @@ Rails.application.routes.draw do
   post 'sign_in' => 'sessions#create'
   delete '/sign_out' => 'sessions#delete', as: :sign_out
 
-
-
-
-  # The priority is based upon order of creation: first created -> highest priority.
+# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
