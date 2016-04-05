@@ -1,0 +1,2 @@
+module JuicesHelper
+end
