@@ -1,2 +1,12 @@
-<h1>Juices#index</h1>
-<p>Find me in app/views/juices/index.html.erb</p>
+<div class="container">
+  <div class="health_container">
+    <div class="row">
+    <% @juices.each do |juice| %>
+<ul>
+  <li><%= juice.name %></li>
+    <li><%= juice.description %></li>
+
+</ul>
+  <% end %>
+</div>
+  </div>

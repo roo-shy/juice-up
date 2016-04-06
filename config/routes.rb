@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-root 'health_issues#index' 
+root 'health_issues#index'
+get 'juices' => 'juices#index', as: :juices
 
 
 # The priority is based upon order of creation: first created -> highest priority.
