@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
 
-  get "health_issues" => 'health_issues#index'
+root 'health_issues#index' 
 
 
 # The priority is based upon order of creation: first created -> highest priority.

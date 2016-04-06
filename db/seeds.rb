@@ -1,4 +1,3 @@
-
 j1 = Juice.create name: "Strawberry"
 j2 = Juice.create name: "Cranberry/Blueberry"
 j3 = Juice.create name: "Pomegranate"
@@ -19,6 +18,8 @@ teeth = HealthIssue.create name: "Teeth"
 gums = HealthIssue.create name: "Gums"
 blood = HealthIssue.create name: "Diabetes"
 weight = HealthIssue.create name: "Weight Loss"
+
+
 
 # Remedy.create juice: j7, weight: "Weight", remedy: "Weight Loss"
 # Remedy.create juice: j1, teeth: "Teeth", remedy: "Teeth Health"
