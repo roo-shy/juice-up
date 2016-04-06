@@ -22,26 +22,26 @@ blood = HealthIssue.create name: "Diabetes"
 weight = HealthIssue.create name: "Weight Loss"
 inflammation = HealthIssue.create name: "Inflammation"
 
-Remedy.create juice_id: j1,
-                       health_issue_id: teeth
-Remedy.create juice_id: j2,
-                       health_issue_id: blood
-Remedy.create juice_id: j3,
-                      health_issue_id: inflammation
-Remedy.create juice_id: j4,
-                      health_issue_id: blood
-Remedy.create juice_id: j5,
-                      health_issue_id: inflammation
-Remedy.create juice_id: j6,
-                      health_issue_id: teeth
-Remedy.create juice_id: j7,
-                      health_issue_id: blood
-Remedy.create juice_id: j8,
-                      health_issue_id: weight
-Remedy.create juice_id: j9,
-                      health_issue_id: digestion
-Remedy.create juice_id: j10,
-                      health_issue_id: weight
+Remedy.create juice_id: j1.id,
+                       health_issue_id: teeth.id
+Remedy.create juice_id: j2.id,
+                       health_issue_id: blood.id
+Remedy.create juice_id: j3.id,
+                      health_issue_id: inflammation.id
+Remedy.create juice_id: j4.id,
+                      health_issue_id: blood.id
+Remedy.create juice_id: j5.id,
+                      health_issue_id: inflammation.id
+Remedy.create juice_id: j6.id,
+                      health_issue_id: teeth.id
+Remedy.create juice_id: j7.id,
+                      health_issue_id: blood.id
+Remedy.create juice_id: j8.id,
+                      health_issue_id: weight.id
+Remedy.create juice_id: j9.id,
+                      health_issue_id: digestion.id
+Remedy.create juice_id: j10.id,
+                      health_issue_id: weight.id
 
 
 # Remedy.create juice: j7, weight: "Weight", remedy: "Weight Loss"
