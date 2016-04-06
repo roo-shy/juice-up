@@ -4,7 +4,7 @@
     <% @health_issues.each do |health_issue| %>
 <ul>
   <li><%= health_issue.name %></li>
-  
+  <li><i class ="<%= health_issue.icon_class %>"></i></li>
 </ul>
   <% end %>
 </div>
