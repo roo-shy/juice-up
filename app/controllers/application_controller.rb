@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user!
-    id @current_user.blank?
-    redirect_to sign_in_path  
+    if @current_user.blank?
+    redirect_to sign_in_path
+  end
+ end
 end
