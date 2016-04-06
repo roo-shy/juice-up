@@ -1,2 +1,12 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+ul {
+  list-style: none;
+}
+
+.health_container{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}

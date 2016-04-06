@@ -19,8 +19,6 @@ gums = HealthIssue.create name: "Gums"
 blood = HealthIssue.create name: "Diabetes"
 weight = HealthIssue.create name: "Weight Loss"
 
-
-
 # Remedy.create juice: j7, weight: "Weight", remedy: "Weight Loss"
 # Remedy.create juice: j1, teeth: "Teeth", remedy: "Teeth Health"
 
