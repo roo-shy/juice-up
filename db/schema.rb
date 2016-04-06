@@ -18,21 +18,8 @@ ActiveRecord::Schema.define(version: 20160405183517) do
 
   create_table "health_issues", force: :cascade do |t|
     t.string   "name"
-    t.string   "diabeties"
-    t.string   "urinary_tract_infection"
-    t.string   "inflammatory"
-    t.string   "high_blood_pressure"
-    t.string   "immune_system_boost"
-    t.string   "gluten_free"
-    t.string   "insomnia"
-    t.string   "iron_deficiency"
-    t.string   "antioxidant"
-    t.string   "cholesterol_lowerer"
-    t.string   "eye_health"
-    t.string   "healthy_teeth"
-    t.string   "healthy_digestion"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "juices", force: :cascade do |t|
@@ -44,13 +31,6 @@ ActiveRecord::Schema.define(version: 20160405183517) do
   create_table "remedies", force: :cascade do |t|
     t.integer  "juice_id"
     t.integer  "health_issue_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
