@@ -1,4 +1,8 @@
 class HealthIssue < ActiveRecord::Base
+ has_many :recipes, through: :remedies
+ validates :name, presence: true
 
-  has_many :recioes, through: :remedies
+ # def health_issue
+ # end
+ #
 end

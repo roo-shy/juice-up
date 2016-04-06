@@ -1,18 +1,8 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  get 'sessions/new'
+  get "health_issues" => 'health_issues#index'
 
-  get 'sessions/create'
-
-  get 'sessions/delete'
-
-  get "juices" => 'juices#index'
-  get "juices/:id" => 'juices#show'
-
-  get 'sign_in' => 'sessions#new', as: :sign_in
-  post 'sign_in' => 'sessions#create'
-  delete '/sign_out' => 'sessions#delete', as: :sign_out
 
 # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
