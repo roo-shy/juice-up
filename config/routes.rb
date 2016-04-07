@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
-root 'health_issues#index'
-get 'juices' => 'juices#index', as: :juices
+  root 'health_issues#index'
+  get 'juices' => 'juices#index', as: :juices
+
+  namespace :api do
+   get 'health_issues' => 'health_issues#index'
+  end
+end
 
 
 # The priority is based upon order of creation: first created -> highest priority.
@@ -58,4 +63,4 @@ get 'juices' => 'juices#index', as: :juices
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+# end
