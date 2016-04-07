@@ -1,6 +1,5 @@
 class AddPhotoToHealthIssues < ActiveRecord::Migration
   def change
-    add_column :health_issues, :string
-    attachment :photo
+    add_column :health_issues, :photo_id, :string
   end
 end
