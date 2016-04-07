@@ -1,12 +1,16 @@
 <div class="container">
   <div class="health_container">
     <div class="row">
+      <div id="main">
     <% @health_issues.each do |health_issue| %>
 <ul>
   <li><%= health_issue.name %></li>
+
 </ul>
   <% end %>
 
-  <%= react_component('Health') %>
+  <%= react_component('CheckboxInput') %>
+  <%= form.file_field :photo_file %>
 </div>
   </div>
+</div>

@@ -14,21 +14,17 @@ j11 = Juice.create name: "Revive" , description: "orange, carrot, apple, lemon",
 j12 = Juice.create name: "Nutrify" , description: "kale, spinach, celery, ginger, apple, lemon", price: 9.50
 
 
-digestion = HealthIssue.create name: "Digestion, Stomach"
-# file  = File.open(File.join(Rails.root,'app/assets/images/medical-1.png'))
-# image = @digestion.build_image(filename: file)
-# image.save
-heart = HealthIssue.create name: "High Blood Pressure"
-eyes = HealthIssue.create name: "Eyes"
-bones = HealthIssue.create name: "Bones"
-joints = HealthIssue.create name: "Joints"
-teeth = HealthIssue.create name: "Teeth"
-gums = HealthIssue.create name: "Gums"
-blood = HealthIssue.create name: "Diabetes"
-weight = HealthIssue.create name: "Weight Loss, Detox"
-respiratory = HealthIssue.create name: "Respiratory System"
-inflammation = HealthIssue.create name: "Inflammation"
-immunization = HealthIssue.create name: "Immunize"
+digestion = HealthIssue.create name: "Digestion, Stomach", photo: File.open(File.join(Rails.root,'test/fixtures/medical-6.png')).read
+heart = HealthIssue.create name: "High Blood Pressure", photo: File.open(File.join(Rails.root,'test/fixtures/medical.png')).read
+eyes = HealthIssue.create name: "Eyes", photo: File.open(File.join(Rails.root,'test/fixtures/medical-2.png')).read
+bones = HealthIssue.create name: "Bones", photo: File.open(File.join(Rails.root,'test/fixtures/medical-3.png')).read
+joints = HealthIssue.create name: "Joints", photo: File.open(File.join(Rails.root,'test/fixtures/medical-3.png')).read
+teeth = HealthIssue.create name: "Teeth, Gums", photo: File.open(File.join(Rails.root,'test/fixtures/medical-1.png')).read
+blood = HealthIssue.create name: "Diabetes", photo: File.open(File.join(Rails.root,'test/fixtures/shape.png')).read
+weight = HealthIssue.create name: "Weight Loss, Detox", photo: File.open(File.join(Rails.root,'test/fixtures/weight.png')).read
+respiratory = HealthIssue.create name: "Respiratory System", photo: File.open(File.join(Rails.root,'test/fixtures/medical-4.png')).read
+inflammation = HealthIssue.create name: "Inflammation", photo: File.open(File.join(Rails.root,'test/fixtures/nature.png')).read
+immunization = HealthIssue.create name: "Immunize", photo: File.open(File.join(Rails.root,'test/fixtures/person.png')).read
 
 
 Remedy.create juice_id: j1.id,
