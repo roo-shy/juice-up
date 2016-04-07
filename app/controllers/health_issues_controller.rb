@@ -6,5 +6,5 @@ class HealthIssuesController < ApplicationController
 
   def health_issue_params
   params.require(:health_issue).permit(:photo)
-end
+  end
 end
