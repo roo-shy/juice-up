@@ -14,17 +14,23 @@ j11 = Juice.create name: "Revive" , description: "orange, carrot, apple, lemon",
 j12 = Juice.create name: "Nutrify" , description: "kale, spinach, celery, ginger, apple, lemon", price: 9.50
 
 
-digestion = HealthIssue.create name: "Digestion, Stomach", photo: File.new(File.join(Rails.root,'test/fixtures/medical-6.png')).read
-heart = HealthIssue.create name: "High Blood Pressure", photo: File.new(File.join(Rails.root,'test/fixtures/medical.png')).read
-eyes = HealthIssue.create name: "Eyes", photo: File.new(File.join(Rails.root,'test/fixtures/medical-2.png')).read
-bones = HealthIssue.create name: "Bones", photo: File.new(File.join(Rails.root,'test/fixtures/medical-3.png')).read
-joints = HealthIssue.create name: "Joints", photo: File.new(File.join(Rails.root,'test/fixtures/medical-3.png')).read
-teeth = HealthIssue.create name: "Teeth, Gums", photo: File.new(File.join(Rails.root,'test/fixtures/medical-1.png')).read
-blood = HealthIssue.create name: "Diabetes", photo: File.new(File.join(Rails.root,'test/fixtures/shape.png')).read
-weight = HealthIssue.create name: "Weight Loss, Detox", photo: File.new(File.join(Rails.root,'test/fixtures/weight.png')).read
-respiratory = HealthIssue.create name: "Respiratory System", photo: File.new(File.join(Rails.root,'test/fixtures/medical-4.png')).read
-inflammation = HealthIssue.create name: "Inflammation", photo: File.new(File.join(Rails.root,'test/fixtures/nature.png')).read
-immunization = HealthIssue.create name: "Immunize", photo: File.new(File.join(Rails.root,'test/fixtures/person.png')).read
+def upload_image(photo_name)
+  backend = Refile.store
+  path = File.join(Rails.root, "test/fixtures/#{photo_name}.png")
+  backend.upload(File.new(path))
+end
+
+digestion = HealthIssue.create name: "Digestion, Stomach", photo_id: upload_image('shape-1').id
+heart = HealthIssue.create name: "High Blood Pressure", photo_id: upload_image('medical').id
+eyes = HealthIssue.create name: "Eyes", photo_id: upload_image('medical-2').id
+bones = HealthIssue.create name: "Bones", photo_id: upload_image('medical-3').id
+joints = HealthIssue.create name: "Joints", photo_id: upload_image('medical-3').id
+teeth = HealthIssue.create name: "Teeth, Gums", photo_id: upload_image('medical-1').id
+blood = HealthIssue.create name: "Diabetes", photo_id: upload_image('shape').id
+weight = HealthIssue.create name: "Weight Loss, Detox", photo_id: upload_image('weight').id
+respiratory = HealthIssue.create name: "Respiratory System", photo_id: upload_image('medical-4').id
+inflammation = HealthIssue.create name: "Inflammation", photo_id: upload_image('nature').id
+immunization = HealthIssue.create name: "Immunize", photo_id: upload_image('person').id
 
 
 Remedy.create juice_id: j1.id,

@@ -6,14 +6,28 @@ ul {
 }
 
 .health_container{
-  display: flex;
-  justify-content: center;
   margin-top:100px;
-  padding: 50px;
-}
+  padding: 40px;
 
-.navbar-inverse {
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding:50px;
+
+  p{
+    display:flex;
+    padding:100px;
+  }
+  }
+  }
+
+ .navbar-inverse {
   padding:40px;
   background-color:#000000;
 
+}
+
+#name {
+  padding:0px;
 }

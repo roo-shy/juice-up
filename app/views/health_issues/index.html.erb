@@ -1,17 +1,16 @@
-<div class="container">
-  <div class="health_container">
-    <div class="row">
-      <div id="main">
-    <% @health_issues.each do |health_issue| %>
-<ul>
-  <li><%= health_issue.name %></li>
-<%= image_tag attachment_image_tag(health_issue, :photo, :fill, 200, 200, format: "jpg") %>
+<div class="health_container">
+  <div class="row">
+    <div id="main">
+      <ul>
+      <% @health_issues.each do |health_issue| %>
+      <li>
+    <p> <%= image_tag attachment_url(health_issue, :photo, :fill, 180, 180, format: "jpg") %></p>
+  <p id="name"><%= health_issue.name %></p></li>
 
-</ul>
-  <% end %>
+      <% end %>
+    </ul>
 
-  <%= react_component('CheckboxInput') %>
+      <%= react_component('CheckboxInput') %>
 
-</div>
+    </div>
   </div>
-</div>
