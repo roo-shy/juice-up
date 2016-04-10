@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  # ActionController::Routing::Routes.draw do |map|
+  # map.resources :health_issues, :collection => { :complete => :put }
 
   root 'health_issues#index'
   get 'juices' => 'juices#index', as: :juices
+  put 'health_issues' => 'health_issues#index', as: :health_issues
 
   namespace :api do
    get 'health_issues' => 'health_issues#index'
