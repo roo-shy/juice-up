@@ -19,8 +19,8 @@
 
   <%= form_tag(juices_path, :method => "get", id: "search-form") do %>
   <% @health_issues.each do |health_issue| %>
-    <%= image_tag attachment_url(health_issue, :photo, :fill, 180, 180, format: "") %></p>
-     <%= check_box_tag :health_issue_id, params[:health_issue_id], placeholder: "Search Juices" %>
-     <% end %>
-     <%= submit_tag "Search", :name => nil %>
-     <% end %>
+  <%= image_tag attachment_url(health_issue, :photo, :fill, 180, 180, format: "") %>
+  <%= check_box_tag :health_issue_id, params[:health_issue_id], placeholder: "Search Juices" %>
+  <% end %>
+  <%= submit_tag "Search", :name => nil %>
+  <% end %>

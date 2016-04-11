@@ -3,8 +3,8 @@ class JuicesController < ApplicationController
     @juices = Juice.all
     if params[:id]
       @juices = Juice.search(params[:id])
-    else
-      @juices = Juice.all
+    # else
+    #   @juices = Juice.all
     end
   end
 
