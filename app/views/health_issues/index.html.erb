@@ -5,7 +5,7 @@
     <ul>
       <% @health_issues.each do |health_issue| %>
      <li>
-<p> <%= image_tag attachment_url(health_issue, :photo, :fill, 180, 180, format: "jpg") %></p>
+<p> <%= image_tag attachment_url(health_issue, :photo, :fill, 180, 180, format: "png") %></p>
   <p id="name"><%= health_issue.name %></p>
 <%= check_box_tag "health_issue_ids[]", health_issue.id%></li>
       <% end %>
