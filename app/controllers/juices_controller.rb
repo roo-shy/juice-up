@@ -1,6 +1,11 @@
 class JuicesController < ApplicationController
   def index
     @juices = Juice.all
+    if params[:id]
+      @juices = Juice.search(params[:id])
+    else
+      @juices = Juice.all
+    end
   end
 
   def juice_params
