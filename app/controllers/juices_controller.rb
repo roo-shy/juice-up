@@ -3,6 +3,10 @@ class JuicesController < ApplicationController
     @juices = Juice.all
   end
 
+  def juice_params
+  params.require(:juice).permit(:photo)
+  end
+
   def show
   end
 end

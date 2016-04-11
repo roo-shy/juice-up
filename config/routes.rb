@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root 'health_issues#index'
   get 'juices' => 'juices#index', as: :juices
+  get 'juices/:id' => 'juices#show', as: :juice
   put 'health_issues' => 'health_issues#index', as: :health_issues
 
   namespace :api do
