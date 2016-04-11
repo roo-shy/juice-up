@@ -20,17 +20,17 @@ def upload_image(photo_name)
   backend.upload(File.new(path))
 end
 
-digestion = HealthIssue.create name: "Digestion, Stomach", photo_id: upload_image('shape-1').id
-heart = HealthIssue.create name: "High Blood Pressure", photo_id: upload_image('medical').id
-eyes = HealthIssue.create name: "Eyes", photo_id: upload_image('medical-2').id
-bones = HealthIssue.create name: "Bones", photo_id: upload_image('medical-3').id
-joints = HealthIssue.create name: "Joints", photo_id: upload_image('medical-3').id
-teeth = HealthIssue.create name: "Teeth, Gums", photo_id: upload_image('medical-1').id
-blood = HealthIssue.create name: "Diabetes", photo_id: upload_image('shape').id
+digestion = HealthIssue.create name: "Digestion, Stomach", photo_id: upload_image('intestine').id
+heart = HealthIssue.create name: "High Blood Pressure", photo_id: upload_image('heart').id
+eyes = HealthIssue.create name: "Eyes", photo_id: upload_image('eye').id
+bones = HealthIssue.create name: "Bones", photo_id: upload_image('joint').id
+joints = HealthIssue.create name: "Joints", photo_id: upload_image('joint').id
+teeth = HealthIssue.create name: "Teeth, Gums", photo_id: upload_image('tooth').id
+blood = HealthIssue.create name: "Diabetes", photo_id: upload_image('bloodvessel').id
 weight = HealthIssue.create name: "Weight Loss, Detox", photo_id: upload_image('weight').id
-respiratory = HealthIssue.create name: "Respiratory System", photo_id: upload_image('medical-4').id
-inflammation = HealthIssue.create name: "Inflammation", photo_id: upload_image('nature').id
-immunization = HealthIssue.create name: "Immunize", photo_id: upload_image('person').id
+respiratory = HealthIssue.create name: "Respiratory System", photo_id: upload_image('lungs').id
+inflammation = HealthIssue.create name: "Inflammation", photo_id: upload_image('inflammation').id
+immunization = HealthIssue.create name: "Immunize", photo_id: upload_image('immune').id
 
 
 Remedy.create juice_id: j1.id,
