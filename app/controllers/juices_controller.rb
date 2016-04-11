@@ -8,5 +8,6 @@ class JuicesController < ApplicationController
   end
 
   def show
+    @juice = Juice.find_by id: params[:id]
   end
 end
