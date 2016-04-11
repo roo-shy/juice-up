@@ -1,14 +1,15 @@
 <div class="container">
   <div class="health_container">
     <div class="row">
-    <% @juices.each do |juice| %>
-<ul>
-    <li><%= link_to juice.name, juice_path(id: juice.id) %></li>
-  <li><%= image_tag attachment_url(juice, :photo, :fill, 250, 250, format: "png") %></li>
-    <li><%= juice.description %></li>
-    <li><%= juice.price %></li>
-
-</ul>
-  <% end %>
-</div>
+       <div class="col-md-4">
+      <% @juices.each do |juice| %>
+        <h3><%= link_to juice.name, juice_path(id: juice.id) %></h3>
+      <ul>
+        <li><%= image_tag attachment_url(juice, :photo, :fill, 300, 300, format: "png") %></li>
+        <li><%= juice.description %></li>
+        <li>$<%= juice.price %></li>
+     </ul>
+      <% end %>
+      </div>
+    </div>
   </div>
