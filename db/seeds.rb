@@ -73,6 +73,16 @@ Remedy.create juice_id: j11.id,
                       health_issue_id: weight.id
 Remedy.create juice_id: j12.id,
                       health_issue_id: weight.id
+Remedy.create juice_id: j11.id,
+                      health_issue_id: eyes.id
+Remedy.create juice_id: j12.id,
+                      health_issue_id: bones.id
+Remedy.create juice_id: j12.id,
+                      health_issue_id: joints.id
+Remedy.create juice_id: j5.id,
+                      health_issue_id: bones.id
+Remedy.create juice_id: j5.id,
+                      health_issue_id: joints.id
 
 # Remedy.create juice: j7, weight: "Weight", remedy: "Weight Loss"
 # Remedy.create juice: j1, teeth: "Teeth", remedy: "Teeth Health"
