@@ -1,6 +1,6 @@
 <div class="health_container">
   <div class="row">
-    <div id="main">
+    <!--<div id="main">
       <%form_tag do %>
       <ul>
         <% @health_issues.each do |health_issue| %>
@@ -13,14 +13,14 @@
 
       </ul>
       <%= submit_tag "Submit Your Request" %>
-      <% end %>
-    </div>
-  </div>
+      <% end %>-->
 
-  <%= form_tag(juices_path, :method => "get", id: "search-form") do %>
-  <% @health_issues.each do |health_issue| %>
-  <%= image_tag attachment_url(health_issue, :photo, :fill, 180, 180, format: "") %>
-  <%= check_box_tag :health_issue_id, params[:health_issue_id], placeholder: "Search Juices" %>
-  <% end %>
-  <%= submit_tag "Search", :name => nil %>
-  <% end %>
+    <%= form_tag(juices_path, :method => "get", enforce_utf8: false, id: "search-form") do %>
+    <% @health_issues.each do |health_issue| %>
+    <%= image_tag attachment_url(health_issue, :photo, :fill, 180, 180, format: "") %>
+    <%= check_box_tag "juice_id-#{health_issue.id}", params[:health_issue_id], html: { placeholder: "Search Juices"} %>
+    <% end %>
+    <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
+    <% end %>
+  </div>
+</div>

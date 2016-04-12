@@ -6,7 +6,7 @@ class Juice < ActiveRecord::Base
   attachment :photo
 
   def self.search(search)
-    where("health_issue_id == ?", "health_issue.id")
+    where("health_issue_id LIKE ?", "health_issue.id")
   end
 
 end
