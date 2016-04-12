@@ -22,7 +22,6 @@ class JuicesController < ApplicationController
       #   where health_issues.id = 10
 
       @juices = Juice.joins(:remedies => :health_issue).where("health_issues.id IN (?) ", health_issue_ids_list).uniq
-
     else
       @juices = Juice.all
     end
@@ -35,9 +34,6 @@ class JuicesController < ApplicationController
     def show
       @juice = Juice.find_by id: params[:id]
     end
-
-# @juices = HealthIssue.where("name LIKE ?", "%#{params[:search]}%").map(&:juice_id)
-# @health_issues = HealthIssue.joins(:juices).where("juice.name like '%?%'",params[:search])
 
     def juice_params
     params.require(:juice).permit(:photo)
