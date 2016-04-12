@@ -19,8 +19,6 @@ ul {
 }
 
 img{
-  // float: left;
-  padding: 60px;
   border: solid 1px #dddddd;
   display: flex;
   flex-direction: row;
@@ -33,7 +31,12 @@ img{
   flex-wrap: wrap;
 }
 
-.image{
-  margin-top:200px;
-  margin-left: 300px;
+.buttoncontainer{
+  margin-top: 450px;
+  margin-left: 200px;
+}
+
+.btn-warning{
+  padding: 20px 70px;
+  font-size: 20px;
 }
