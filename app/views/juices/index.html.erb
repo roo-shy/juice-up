@@ -1,6 +1,5 @@
  <div class="health_container">
     <div class="row">
-       <div class="col-sm-4">
         <% @juices.each do |juice| %>
         <h3><%= link_to juice.name, juices_path(id: juice.id) %></h3>
       <%= image_tag attachment_url(juice, :photo, :fill, 300, 300, format: "png") %>
@@ -9,6 +8,5 @@
         <p>$<%= juice.price %></p>
 
       <% end %>
-      </div>
       </div>
     </div>
