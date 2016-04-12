@@ -2,6 +2,7 @@ class HealthIssuesController < ApplicationController
 
   def index
     @health_issues = HealthIssue.all
+    @juices = Juice.new
   end
 
   def health_issue_params
