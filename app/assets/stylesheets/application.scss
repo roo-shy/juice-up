@@ -8,12 +8,10 @@ ul {
 .health_container{
   margin-top:100px;
   padding: 40px;
-  display: flex;
-  flex-direction: row;
 
 }
 
- .navbar-inverse {
+.navbar-inverse {
   padding:40px;
   background-color:#000000;
 }
@@ -25,4 +23,14 @@ img{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.col-lg-12{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.image{
+  margin-top:200px;
 }
