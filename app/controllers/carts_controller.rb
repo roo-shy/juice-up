@@ -16,7 +16,7 @@ class CartsController < ApplicationController
   else
     order_item = OrderItem.new
     order_item.order = order
-    order_item.book = @juice
+    order_item.juice = @juice
     order_item.price = @juice.price
     order_item.shipping_cost = 0
     order_item.quantity = 1

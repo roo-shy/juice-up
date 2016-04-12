@@ -19,7 +19,8 @@
           <h3><%= link_to juice.name, juices_path(id: juice.id) %></h3>
           <%= image_tag attachment_url(juice, :photo, :fill, 300, 300, format: "png") %>
           <p><%= juice.description %></p>
-          <p>$<%= juice.price %></p>
+          <p><%= number_to_currency(juice.price) %></p>
+          <%= link_to 'Add to Cart', add_to_cart_path(juice_id: juice.id), class: "btn", method: :post %>
         </div>
         <% end %>
       </div>
