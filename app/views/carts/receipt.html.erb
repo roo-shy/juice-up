@@ -1,0 +1,28 @@
+<div class="column">
+  <div class="row">
+    <div class="col-lg-12">
+      <h4>Thank you for your purchase
+        <%= @order.id%></h4>
+      <% @order.order_items.each do |order_item| %>
+      <%= image_tag attachment_url(order_item.book, :book_image, :fill, 300, 400, format: "jpg") %>
+      <ul>
+        <li>
+          <strong>Purchase Date</strong>:
+          <%= local_time(@order.purchased_at) %>
+        </li>
+        <ul>
+          <li>Order ID:
+            <%= @order.description %></li>
+
+          <li>Title:
+            <%= order_item.book.title %></li>
+          <li>Quantity:
+            <%= order_item.quantity %></li>
+          <li>Total Price:
+            <%= number_to_currency order_item.total_price %></li>
+          <% end %>
+        </ul>
+        <%= link_to 'View More', root_path, class: "waves-effect waves-light btn" %>
+      </div>
+    </div>
+  </div>
