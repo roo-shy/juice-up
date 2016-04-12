@@ -1,4 +1,3 @@
-
 def upload_image(photo_name)
   backend = Refile.store
   path = File.join(Rails.root, "test/fixtures/#{photo_name}.png")
