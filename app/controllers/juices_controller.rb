@@ -1,4 +1,5 @@
 class JuicesController < ApplicationController
+  before_action :authenticate_user!
     def index
       # @juices = Juice.all
       health_issue_ids_list = []

@@ -1,35 +1,37 @@
 <div class="container">
-<h1>New User Registration</h1>
-
-<% if @user.errors.any? %>
+  <% if @user.errors.any? %>
 <%= pluralize(@user.errors.count, 'error') %>
 prevented your form from success.
-<ul class="mdl-list">
+<ul class="">
   <% @user.errors.full_messages.each do |msg| %>
-  <li class="mdl-list__item"><%= msg %></li>
+  <li class=""><%= msg %></li>
   <% end %>
 </ul>
 <% end %>
-
+<div class="signincontainer">
+  </div>
+   <div class="signin">
+     <h1>New User Registration</h1>
 <%= form_for @user do |f| %>
-<div class="">
+<div class="form-group">
   <%= f.label :name %>
   <%= f.text_field :name %>
 </div>
 
-<div class="">
+<div class="form-group">
   <%= f.label :email %>
   <%= f.text_field :email %>
 </div>
 
-<div class="">
+<div class="form-group">
   <%= f.label :password %>
   <%= f.password_field :password %>
 </div>
 
-<div class="">
+<div class="form-group">
   <%= f.submit class: "btn btn-warning" %>
 
 </div>
 <% end %>
+</div>
 </div>

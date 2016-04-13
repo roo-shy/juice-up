@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'juices/:id' => 'juices#show', as: :juice
 
   get 'health_issues' => 'health_issues#index', as: :health_issues
+  get 'juicebars' => 'juicebars#index', as: :juicebars
 
   get 'cart' => 'carts#view', as: :cart
   post 'cart' => 'carts#add_to_cart', as: :add_to_cart
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
   post '/register' => 'registration#create', as: :users
 
   get 'receipt/:id' => 'carts#receipt', as: :receipt
-  
+
   namespace :api do
    get 'health_issues' => 'health_issues#index'
   end
