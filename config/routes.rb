@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # ActionController::Routing::Routes.draw do |map|
   # map.resources :health_issues, :collection => { :complete => :put }
-
+  get 'sign_in' => 'session#new', as: :sign_in
+  post 'sign_in' => 'session#create'
+  get 'sign_out' => 'session#delete', as: :sign_out
   root 'home#index'
   get 'juices' => 'juices#index', as: :juices
   get 'juices/:id' => 'juices#show', as: :juice
@@ -16,6 +18,11 @@ Rails.application.routes.draw do
   get 'orders' => 'orders#index', as: :orders
   get 'orders/:id' => 'orders#show', as: :order
 
+  get '/register' => 'registration#new', as: :new_user
+  post '/register' => 'registration#create', as: :users
+
+  get 'receipt/:id' => 'carts#receipt', as: :receipt
+  
   namespace :api do
    get 'health_issues' => 'health_issues#index'
   end
