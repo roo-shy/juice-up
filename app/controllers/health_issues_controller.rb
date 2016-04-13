@@ -1,5 +1,5 @@
 class HealthIssuesController < ApplicationController
-
+before_action :authenticate_user!
   def index
     @health_issues = HealthIssue.all
     @juices = Juice.new

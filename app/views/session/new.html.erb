@@ -1,19 +1,24 @@
 <div class="container">
 <div class="row">
-   <h1>Sign In</h1>
-      <%= form_tag do %>
-        <div class="">
-          <%= label_tag :email %>
+<div class="signincontainer">
+  </div>
+   <div class="signin">
+      <h1>Sign In</h1>
+    <%= form_tag do %>
+        <div class="form-group">
+          <%= label_tag :email%>
           <%= text_field_tag :email %>
         </div>
-        <div class="">
+        <div class="form-group">
           <%= label_tag :password %>
           <%= password_field_tag :password %>
         </div>
+          <div class="form-group">
         <%= submit_tag "Sign In", class: "btn btn-warning" %> or
         <%= link_to 'Sign Up', new_user_path, class: "btn btn-warning" %>
-
+      </div>
       <% end %>
-
+   </div>
   </div>
+
 </div>
