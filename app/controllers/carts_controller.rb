@@ -28,7 +28,7 @@ end
 
   def remove_from_cart
     @order = Order.find_by status: 'cart', user_id: @current_user.id
-    @juice = Juice.find_by id: params[:book_id]
+    @juice = Juice.find_by id: params[:juice_id]
 
     order_item = OrderItem.find_by order_id: @order.id, juice_id: @juice.id
     order_item.destroy
@@ -44,7 +44,7 @@ end
   end
 
   def process_payment
-    @order = Order.find_by status: 'cart', user_is: @current_user.id
+    @order = Order.find_by status: 'cart', user_id: @current_user.id
 
     card_token = params[:stripeToken]
     Stripe.api_key = "sk_test_nS1fPRl8hr8ALmJydiCFejvd"

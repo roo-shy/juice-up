@@ -2,6 +2,7 @@
 @import 'bootstrap';
 @import 'health_issue';
 @import 'juices';
+@import 'carts';
 
 ul {
   list-style: none;
@@ -37,6 +38,10 @@ img{
 }
 
 .btn-warning{
-  padding: 20px 70px;
-  font-size: 20px;
+  padding: 5px 30px;
+  font-size: 15px;
+}
+
+.container{
+  margin-top:200px;
 }

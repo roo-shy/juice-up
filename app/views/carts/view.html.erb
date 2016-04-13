@@ -1,24 +1,20 @@
-<div class="column">
-  <div class="row">
-  <div class="col-xs-12">
-
+  <div class="container">
+    <div class="row">
+      <h4><%= @current_user.name %>'s cart</h4>
       <% if @order %>
       <% @order.order_items.each do |order_item| %>
       <hr>
+      <%= image_tag attachment_url(order_item.juice, :photo, :fill, 440, 440, format: "png") %>
       <ul>
-        <li>Title:
-          <%= order_item.juice.name %></li>
-        <li>Quantity:
-          <%= order_item.quantity %></li>
-        <li>Total Price:
-          <%= number_to_currency order_item.total_price %></li>
+        <li>Title:<%= order_item.juice.name %></li>
+        <li>Quantity:<%= order_item.quantity %></li>
+        <li>Total Price:<%= number_to_currency order_item.total_price %></li>
         <li><%= link_to 'Remove', remove_from_cart_path(juice_id: order_item.juice_id), method: :delete %></li>
       </ul>
       <% end %>
 
       <hr>
-      <h6>Order Total:
-        <%= number_to_currency @order.total_price %></h6>
+      <h6>Order Total: <%= number_to_currency @order.total_price %></h6>
       <div class="">
         <% if @order.order_items.present? %>
         <%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
@@ -32,14 +28,14 @@
           data-amount="<%= @order.total_price_in_cents %>"
           data-email="<%= @current_user.email %>"
           data-shipping-address="true"
-          data-locale="auto"></script>
+          data-locale="auto">
+        </script>
 
         <% end %>
       <% else %>
         <%= link_to 'Continue Shopping', books_path, class: "waves-effect waves-light btn" %>
         <% end %>
       </div>
-      <% end %>
+<% end %>
     </div>
   </div>
-</div>
