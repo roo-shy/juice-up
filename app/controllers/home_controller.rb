@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+   before_action :authenticate_user, only: [:home]
   def index
     user_id = session[:user_id]
     if user_id.present?
