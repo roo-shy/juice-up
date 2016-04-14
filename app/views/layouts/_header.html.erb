@@ -5,8 +5,9 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Juice Recipes", juices_path, style:"color:#f39c12"%></li>
+
         <li><%= link_to "Health Issues", health_issues_path, style:"color:#f39c12"%></li>
+          <li><%= link_to "Juice Recipes", juices_path, style:"color:#f39c12"%></li>
         <% if @current_user %>
            <li><%= link_to "Sign Out", sign_out_path %></li>
            <% else %>
