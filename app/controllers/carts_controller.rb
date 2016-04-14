@@ -37,6 +37,7 @@ end
 
   def view
     @order = Order.find_by status: 'cart', user_id: @current_user.id
+    @juicebars = Juicebar.all
   end
 
   def start

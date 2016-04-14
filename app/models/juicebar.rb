@@ -4,4 +4,5 @@ class Juicebar < ActiveRecord::Base
   geocoded_by :location
   after_validation :geocode
 
+  validates :name, :location, presence: true
 end
