@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get 'receipt/:id' => 'carts#receipt', as: :receipt
 
   namespace :api do
-   get 'health_issues' => 'health_issues#index'
+  get 'health_issues' => 'health_issues#index'
   end
 end
 

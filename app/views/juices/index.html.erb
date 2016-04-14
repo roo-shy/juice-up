@@ -1,12 +1,11 @@
 <div class="health_container">
   <div class="row">
-    <div class="col-lg-12">
       <div class="juicescontainer">
         <% @juices.each do |juice| %>
         <div class="juices">
-          <h3><%= link_to juice.name, juices_path(id: juice.id) %></h3>
-          <%= image_tag attachment_url(juice, :photo, :fill, 300, 300, format: "png") %>
-          <p><%= juice.description %></p>
+          <h3><%= link_to juice.name, juice_path(id: juice.id) %></h3>
+          <%= image_tag attachment_url(juice, :photo, :fill, 350, 350, format: "png") %>
+          <%= juice.description %>
           <p><%= number_to_currency(juice.price) %></p>
           <%= link_to 'Add to Cart', add_to_cart_path(juice_id: juice.id), class: "btn", method: :post %>
         </div>
@@ -14,4 +13,3 @@
       </div>
     </div>
   </div>
-</div>
