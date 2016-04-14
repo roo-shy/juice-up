@@ -4,7 +4,8 @@
     <% if @order %>
     <% @order.order_items.each do |order_item| %>
     <hr>
-    <%= image_tag attachment_url(order_item.juice, :photo, :fill, 440, 440, format: "png") %></br>
+    <%= image_tag attachment_url(order_item.juice, :photo, :fill, 440, 440, format: "png") %>
+    </br>
     <div class="checkoutlist">
     <ul>
       <li><strong>Title:</strong>  <%= order_item.juice.name %></li>
@@ -43,22 +44,20 @@
   </div>
 
   <div id="mapid"></div>
-
-  <div id="mapid"></div>
-
- <script type="text/javascript">
- $(window).ready(function(){
-   var mymap = L.map('mapid').setView([29.73, -95.39], 10);
-   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-     maxZoom: 18,
-     id: 'jwo-cink.pia181pk',
-     accessToken: 'pk.eyJ1IjoiandvLWNpbmsiLCJhIjoiQVBfcW9OOCJ9.k2Q4vbfJs16Idk2cOziQYQ'
- }).addTo(mymap);
-   <% @juicebars.each do |juicebar| %>
-     L.marker([<%= juicebar.latitude %>, <%= juicebar.longitude %>]).addTo(mymap)
-       .bindPopup('<b><%= juicebar.location %></b><br/><%= link_to 'View Postcard', juicebar_path(id: juicebar.id ), class: "btn btn-default btn-block" %>');
-   <% end %>
- })
- </script>
+   <script type="text/javascript">
+   $(window).ready(function(){
+     var mymap = L.map('mapid').setView([29.73, -95.39], 10);
+     L.Icon.Default.imagePath = "/assets";
+     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+       maxZoom: 18,
+       id: 'jwo-cink.pia181pk',
+       accessToken: 'pk.eyJ1IjoiandvLWNpbmsiLCJhIjoiQVBfcW9OOCJ9.k2Q4vbfJs16Idk2cOziQYQ'
+   }).addTo(mymap);
+     <% @juicebars.each do |juicebar| %>
+       L.marker([<%= juicebar.latitude %>, <%= juicebar.longitude %>]).addTo(mymap)
+         .bindPopup('<b><%= juicebar.location %></b><br/><%= link_to 'View Juicebar', juicebars_path(id: juicebar.id ), class: "btn btn-default btn-block" %>');
+     <% end %>
+   })
+   </script>
 </div>

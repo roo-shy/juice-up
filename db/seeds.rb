@@ -84,6 +84,30 @@ Remedy.create juice_id: j5.id,
 Remedy.create juice_id: j5.id,
                       health_issue_id: joints.id
 
+jb1 = Juicebar.create name:"Flow Juice Bar", location: "214 Fairview St, Houston, TX 77006"
+jb2 = Juicebar.create name:"1-3 Day Juice Cleanses", location: "3030 Travis St, Houston, TX 77006"
+jb3 = Juicebar.create name:"Beet Box Blend Bar", location: "Bakery Square, 1909 W Gray St, Houston, TX 77019"
+jb4 = Juicebar.create name:"Squeezed Juice", location: "Houston Center, 1200 McKinney St, Houston, TX 77002"
+jb5 = Juicebar.create name:"Fuel Kitchen and Health Bar", location: "1005 Waugh Dr, Houston, TX 77019"
+
+Juice.find(9).juicebars << Juicebar.find(5)
+Juice.find(12).juicebars << Juicebar.find(5)
+Juice.find(11).juicebars << Juicebar.find(5)
+Juice.find(12).juicebars << Juicebar.find(4)
+Juice.find(11).juicebars << Juicebar.find(4)
+Juice.find(7).juicebars << Juicebar.find(3)
+Juice.find(4).juicebars << Juicebar.find(3)
+Juice.find(5).juicebars << Juicebar.find(3)
+Juice.find(9).juicebars << Juicebar.find(2)
+Juice.find(8).juicebars << Juicebar.find(2)
+Juice.find(3).juicebars << Juicebar.find(1)
+Juice.find(2).juicebars << Juicebar.find(1)
+Juice.find(9).juicebars << Juicebar.find(5)
+Juice.find(1).juicebars << Juicebar.find(1)
+Juice.find(4).juicebars << Juicebar.find(1)
+Juice.find(6).juicebars << Juicebar.find(1)
+Juice.find(10).juicebars << Juicebar.find(1)
+
 # Remedy.create juice: j7, weight: "Weight", remedy: "Weight Loss"
 # Remedy.create juice: j1, teeth: "Teeth", remedy: "Teeth Health"
 
