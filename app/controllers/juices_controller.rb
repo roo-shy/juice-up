@@ -34,6 +34,7 @@ class JuicesController < ApplicationController
 
     def show
       @juice = Juice.find_by id: params[:id]
+      @juicebars = Juicebar.all
     end
 
     def juice_params

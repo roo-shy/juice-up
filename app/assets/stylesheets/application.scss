@@ -3,6 +3,7 @@
 @import 'health_issue';
 @import 'juices';
 @import 'carts';
+@import 'leaflet.css';
 
 ul {
   list-style: none;
@@ -66,4 +67,12 @@ img{
   border-radius: 25px;
 }
 
-#mapid { height: 180px; }
+#mapid { height: 180px; width:300px; }
+
+.leaflet-marker-shadow {
+  border:none;
+}
+
+.leaflet-marker-icon {
+ border:none;
+}

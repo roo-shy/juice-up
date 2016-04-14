@@ -37,7 +37,7 @@ end
 
   def view
     @order = Order.find_by status: 'cart', user_id: @current_user.id
-    @juicebars = Juicebar.all
+    @juicebars = @order.order_items.map {|oi| oi.juice}.map {|j| j.juicebars }.flatten
   end
 
   def start
