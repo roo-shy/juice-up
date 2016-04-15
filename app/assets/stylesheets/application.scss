@@ -67,7 +67,7 @@ img{
   border-radius: 25px;
 }
 
-#mapid { height: 180px; width:300px; }
+#mapid { height: 450px; width:1000px; }
 
 .leaflet-marker-shadow {
   border:none;
@@ -75,4 +75,12 @@ img{
 
 .leaflet-marker-icon {
  border:none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .juicescontainer .juices{
+        flex-direction: column;
+        width: 100%;
+    }
 }

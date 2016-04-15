@@ -5,9 +5,11 @@
         <div class="juices">
           <h3><%= link_to juice.name, juice_path(id: juice.id) %></h3>
           <%= image_tag attachment_url(juice, :photo, :fill, 350, 350, format: "png") %>
+          </br>
           <%= juice.description %>
-          <p><%= number_to_currency(juice.price) %></p>
-          <%= link_to 'Add to Cart', add_to_cart_path(juice_id: juice.id), class: "btn", method: :post %>
+        </br></br>
+          <p style="font-size: 16px;"><strong><%= number_to_currency(juice.price) %></strong>&nbsp&nbsp&nbsp&nbsp<%= link_to 'Add to Cart', add_to_cart_path(juice_id: juice.id), class: "btn", class: "btn btn-warning", method: :post %></p>
+
         </div>
         <% end %>
       </div>
