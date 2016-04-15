@@ -1,3 +1,4 @@
+<%= render 'layouts/header' %>
 <div class="container">
   <div class="row">
       <h4>Thank you for your purchase
@@ -21,6 +22,6 @@
             <%= number_to_currency order_item.total_price %></li>
           <% end %>
         </ul>
-        <%= link_to 'View More', juices_path, class: "waves-effect waves-light btn" %>
+        <%= link_to 'View More', juices_path, class: "btn btn-warning" %>
       </div>
     </div>

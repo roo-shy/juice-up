@@ -4,6 +4,7 @@
 @import 'juices';
 @import 'carts';
 @import 'leaflet.css';
+@import 'font-awesome';
 
 ul {
   list-style: none;
@@ -65,16 +66,6 @@ img{
   height:300px;
   padding:20px;
   border-radius: 25px;
-}
-
-#mapid { height: 450px; width:1000px; }
-
-.leaflet-marker-shadow {
-  border:none;
-}
-
-.leaflet-marker-icon {
- border:none;
 }
 
 

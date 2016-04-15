@@ -6,12 +6,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
 
-        <li><%= link_to "Health Issues", health_issues_path, style:"color:#f39c12"%></li>
-          <li><%= link_to "Juice Recipes", juices_path, style:"color:#f39c12"%></li>
+        <li><%= link_to health_issues_path, class: "button" do%><i class="glyphicon glyphicon-heart"></i><% end %></li>
+
+          <li><%= link_to juices_path, class: "button" do%><i class="glyphicon glyphicon-heart"></i><% end %></li>
         <% if @current_user %>
-           <li><%= link_to "Sign Out", sign_out_path %></li>
+           <li><%= link_to "Sign Out", sign_out_path %><span class="glyphicon glyphicon-user" aria-hidden="true"></span></li>
            <% else %>
-           <li><%= link_to "Sign In", sign_in_path %></li>
+           <li><%= link_to "Sign In", sign_in_path %><span class="glyphicon glyphicon-user" aria-hidden="true"></span></li>
            <% end %>
       </ul>
     </div>

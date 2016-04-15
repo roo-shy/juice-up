@@ -12,5 +12,19 @@
   margin-top:80px;
 }
 
+.mapcolumn{
+  margin-right: 100px;
+#mapid { height: 350px; width:450px; }
+}
+
+.leaflet-marker-shadow {
+  border:none;
+}
+
+.leaflet-marker-icon {
+ border:none;
+}
+
 .checkoutlist{
+  margin-left:-40px;
 }
