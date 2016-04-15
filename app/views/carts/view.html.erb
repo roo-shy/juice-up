@@ -1,11 +1,15 @@
 <div class="container">
   <div class="row">
-    <h4><%= @current_user.name %>'s cart</h4>
+      <div class="col-xs-12">
+        <h4><%= @current_user.name %>'s cart</h4>
+          <hr>
+  <div class="juicescontainer">
     <% if @order %>
     <% @order.order_items.each do |order_item| %>
-    <hr>
-    <%= image_tag attachment_url(order_item.juice, :photo, :fill, 440, 440, format: "png") %>
+
+    <%= image_tag attachment_url(order_item.juice, :photo, :fill, 400, 400, format: "png") %>
     </br>
+
     <div class="checkoutlist">
     <ul>
       <li><strong>Title:</strong>  <%= order_item.juice.name %></li>
@@ -15,8 +19,8 @@
     </ul>
     </div>
     <% end %>
-
-    <hr>
+    </div>
+   <hr>
     <h4>Order Total:
       <%= number_to_currency @order.total_price %></h4>
     <div class="">
@@ -37,12 +41,13 @@
 
       <% end %>
       <% end %>
-    </br>
-      <%= link_to 'Continue Shopping', juices_path %>
+
     </div>
     <% end %>
   </div>
-
+</br><%= link_to 'Continue Shopping', juices_path %>
+   <hr>
+  <div class="col-xs-12">
   <div id="mapid"></div>
    <script type="text/javascript">
    $(window).ready(function(){
@@ -50,8 +55,8 @@
      L.Icon.Default.imagePath = "/assets";
      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-       maxZoom: 18,
-       id: 'jwo-cink.pia181pk',
+       maxZoom: 12,
+       id: 'rooshy.pm83lnj3',
        accessToken: 'pk.eyJ1IjoiandvLWNpbmsiLCJhIjoiQVBfcW9OOCJ9.k2Q4vbfJs16Idk2cOziQYQ'
    }).addTo(mymap);
      <% @juicebars.each do |juicebar| %>
@@ -60,4 +65,7 @@
      <% end %>
    })
    </script>
+</div>
+</div>
+</div>
 </div>
