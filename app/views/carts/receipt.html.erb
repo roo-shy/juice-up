@@ -1,27 +1,27 @@
 <%= render 'layouts/header' %>
 <div class="container">
   <div class="row">
-      <h4>Thank you for your purchase
-        <%= @order.id%></h4>
-      <% @order.order_items.each do |order_item| %>
+      <div class="col-xs-12">
+        <h4>Thank you for your purchase  <%= @order.id%></h4>
+      <div class="juicescontainer">
+       <% @order.order_items.each do |order_item| %>
+        <div class="imageprice">
         <%= image_tag attachment_url(order_item.juice, :photo, :fill, 440, 440, format: "png") %>
-      <ul>
-        <li>
-          <strong>Purchase Date</strong>:
-          <%= local_time(@order.purchased_at) %>
-        </li>
-        <ul>
-          <li>Order ID:
-            <%= @order.description %></li>
-
-          <li>Title:
-            <%= order_item.juice.name %></li>
-          <li>Quantity:
-            <%= order_item.quantity %></li>
-          <li>Total Price:
-            <%= number_to_currency order_item.total_price %></li>
+        </br>
+        <div class="checkoutlist">
+         <ul>
+         <li><strong>Purchase Date</strong>:<%= local_time(@order.purchased_at) %></li>
+          <li>Order ID: <%= @order.id %></li>
+          <li>Title:  <%= order_item.juice.name %></li>
+          <li>Quantity:  <%= order_item.quantity %></li>
+          <li>Total Price:  <%= number_to_currency order_item.total_price %></li>
+          </ul>
+          </div>
+            </div>
           <% end %>
-        </ul>
+
         <%= link_to 'View More', juices_path, class: "btn btn-warning" %>
       </div>
+      </div>
     </div>
+  </div>

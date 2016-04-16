@@ -15,6 +15,7 @@
       <li><strong>Title:</strong>  <%= order_item.juice.name %></li>
       <li><strong>Quantity:</strong>  <%= order_item.quantity %></li>
       <li><strong>Total Price:</strong>  <%= number_to_currency order_item.total_price %></li>
+    </br>
       <li><%= link_to 'Remove', remove_from_cart_path(juice_id: order_item.juice_id), method: :delete, class: "btn btn-danger"%></li>
     </ul>
   </div>
@@ -46,7 +47,9 @@
     </div>
     <% end %>
   </div>
-</br><%= link_to 'Continue Shopping', juices_path %>
+</br>
+
+</br>  <%= link_to 'Continue Shopping', juices_path%>
    <hr>
   <div class="col-xs-12">
   <div id="mapid"></div>

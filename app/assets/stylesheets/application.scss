@@ -5,6 +5,7 @@
 @import 'carts';
 @import 'leaflet.css';
 @import 'font-awesome';
+@import 'style';
 
 ul {
   list-style: none;
@@ -68,6 +69,9 @@ img{
   border-radius: 25px;
 }
 
+.button{
+  font-size: 18px;
+}
 
 @media screen and (max-width: 768px) {
     .juicescontainer .juices{
