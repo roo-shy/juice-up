@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
   default from: "robot@hello.com"
   layout 'mailer'
-  default_url_options[:host] = "http://kidslibrary.herokuapp.com"
+  default_url_options[:host] = "http://juiceme.herokuapp.com"
 end
