@@ -1,7 +1,4 @@
-<div class="container">
-<div class="row">
-<div class="signincontainer">
-  </div>
+<div class="col-xs-4">
    <div class="signin">
       <h1>Sign In</h1>
     <%= form_tag do %>
@@ -13,12 +10,15 @@
           <%= label_tag :password %>
           <%= password_field_tag :password %>
         </div>
-          <div class="form-group">
-        <%= submit_tag "Sign In", class: "btn btn-warning" %> or
+        <div class="form-group">
+        <%= submit_tag "Sign In", class: "btn btn-warning" %>
         <%= link_to 'Sign Up', new_user_path, class: "btn btn-warning" %>
-      </div>
+       </div>
       <% end %>
    </div>
+    </div>
+   <div class="col-xs-12">
+     <div class="image">
+       <%= image_tag 'juice_bg-01.jpg', style:"border-style: hidden;",  class: 'img-responsive' %>
+     </div>
   </div>
-
-</div>

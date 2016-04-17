@@ -1,37 +1,39 @@
-<div class="container">
-  <% if @user.errors.any? %>
-<%= pluralize(@user.errors.count, 'error') %>
-prevented your form from success.
-<ul class="">
-  <% @user.errors.full_messages.each do |msg| %>
-  <li class=""><%= msg %></li>
-  <% end %>
-</ul>
-<% end %>
-<div class="signincontainer">
+    <% if @user.errors.any? %>
+    <%= pluralize(@user.errors.count, 'error') %>
+    prevented your form from success.
+    <ul class="">
+      <% @user.errors.full_messages.each do |msg| %>
+      <li class=""><%= msg %></li>
+      <% end %>
+    </ul>
+    <% end %>
+      <div class="col-xs-4">
+    <div class="signin">
+      <h1>Sign Up</h1>
+      <%= form_for @user do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit class: "btn btn-warning" %>
+      </div>
+      <% end %>
+    </div>
   </div>
-   <div class="signin">
-     <h1>New User Registration</h1>
-<%= form_for @user do |f| %>
-<div class="form-group">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-</div>
-
-<div class="form-group">
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-</div>
-
-<div class="form-group">
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-</div>
-
-<div class="form-group">
-  <%= f.submit class: "btn btn-warning" %>
-
-</div>
-<% end %>
-</div>
-</div>
+  <div class="col-xs-12">
+    <div class="image">
+      <%= image_tag 'juice_bg-01.jpg', style:"border-style: hidden;",  class: 'img-responsive' %>
+    </div>
+  </div>

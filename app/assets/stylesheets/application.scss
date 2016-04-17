@@ -1,4 +1,4 @@
-@import 'bootstrap-sprockets';
+@import "bootstrap-sprockets";
 @import 'bootstrap';
 @import 'health_issue';
 @import 'juices';
@@ -18,8 +18,11 @@ ul {
 }
 
 .navbar-inverse {
-  padding:40px;
   background-color:#000000;
+}
+
+.navbar-brand{
+  margin-left: -37px;
 }
 
 img{
@@ -46,27 +49,19 @@ img{
 }
 
 .container{
-  margin-top:200px;
+  margin-top:50px;
 }
 
-.signincontainer{
-  width:300px;
-  height:300px;
-  background-color: #000000;
-  opacity: 0.2;
-  position:absolute;
-  padding:20px;
-  border-radius: 25px;
-
-}
 .signin{
   display: flex;
   flex-direction: column;
   position:absolute;
-  width:300px;
-  height:300px;
-  padding:20px;
-  border-radius: 25px;
+  z-index: 3;
+}
+
+.image{
+  margin-top:-100px;
+
 }
 
 .button{

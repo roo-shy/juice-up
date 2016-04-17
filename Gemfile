@@ -46,7 +46,7 @@ group :development do
   gem 'spring'
 end
 
-  gem 'bootstrap-sass'
+  gem 'bootstrap-sass', '3.2.0.2'
   gem 'react-rails', '~> 1.0'
   gem 'font-awesome-sass'
   gem "refile", require: "refile/rails"
