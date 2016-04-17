@@ -1,4 +1,4 @@
-<%= render 'layouts/header' %>
+
 <div class="container">
   <div class="row">
       <div class="col-xs-12">
@@ -17,10 +17,11 @@
           <li>Total Price:  <%= number_to_currency order_item.total_price %></li>
           </ul>
           </div>
+          <%= link_to 'View More', juices_path, class: "btn btn-warning" %>
             </div>
           <% end %>
 
-        <%= link_to 'View More', juices_path, class: "btn btn-warning" %>
+
       </div>
       </div>
     </div>

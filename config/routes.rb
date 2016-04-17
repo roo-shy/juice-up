@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'sign_in' => 'session#new', as: :sign_in
   post 'sign_in' => 'session#create'
   get 'sign_out' => 'session#delete', as: :sign_out
+
   root 'home#index'
+
   get 'juices' => 'juices#index', as: :juices
   get 'juices/:id' => 'juices#show', as: :juice
 

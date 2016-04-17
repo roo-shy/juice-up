@@ -5,7 +5,7 @@
 @import 'carts';
 @import 'leaflet.css';
 @import 'font-awesome';
-@import 'style';
+@import 'font-awesome';
 
 ul {
   list-style: none;
@@ -79,3 +79,12 @@ img{
         width: 100%;
     }
 }
+
+ @media screen and (max-width: 400px) {
+   .juicescontainer .juices{
+     font-size: 18px;
+     .center-tagline {
+       font-size: 36px;
+     }
+   }
+ }
