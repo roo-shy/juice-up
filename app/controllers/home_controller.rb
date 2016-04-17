@@ -6,4 +6,6 @@ class HomeController < ApplicationController
     @current_user = User.find_by id: user_id
   end
  end
+
+
 end
