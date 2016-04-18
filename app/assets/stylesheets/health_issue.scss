@@ -1,8 +1,45 @@
 .issuescontainer {
   display:flex;
   flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.plusicon{
+  position: absolute;
+  width: 250px;
+  height:250px;
+  background: #000000;
+  opacity: 0.4;
+  align-items: center;
+}
+
+.glyphicon-plus{
+  position: absolute;
+  align-items: center;
 }
 
 .issues{
   padding: 40px;
 }
+
+// #dripFront {
+// 	position: absolute;
+// 	backface-visibility: hidden;
+// 	-webkit-backface-visibility: hidden;
+// 	-moz-backface-visibility: hidden;
+// }
+//
+// #dripBack {
+// 	transform: rotateY(180deg);
+// 	-webkit-transform: rotateY(180deg);
+// 	-moz-transform: rotateY(180deg);
+// 	backface-visibility: hidden;
+// 	-webkit-backface-visibility: hidden;
+// 	-moz-backface-visibility: hidden;
+// }
+//
+// input[type="checkbox"]:checked ~ .shirtImg {
+//   	transform: rotateY(180deg);
+//   	-webkit-transform: rotateY(180deg);
+//   	-moz-transform: rotateY(180deg);
+// }
