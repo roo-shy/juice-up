@@ -5,12 +5,11 @@ Rails.application.routes.draw do
   post 'sign_in' => 'session#create'
   get 'sign_out' => 'session#delete', as: :sign_out
 
-  root 'home#index'
+  root 'health_issues#index'
 
   get 'juices' => 'juices#index', as: :juices
   get 'juices/:id' => 'juices#show', as: :juice
-
-  get 'health_issues' => 'health_issues#index', as: :health_issues
+  
   get 'juicebars' => 'juicebars#index', as: :juicebars
 
   get 'cart' => 'carts#view', as: :cart
