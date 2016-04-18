@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="row">
       <div class="col-xs-12">
@@ -8,7 +7,7 @@
     <% if @order %>
     <% @order.order_items.each do |order_item| %>
     <div class="imageprice">
-   <%= image_tag attachment_url(order_item.juice, :photo, :fill, 400, 400, format: "png") %>
+   <%= image_tag attachment_url(order_item.juice, :photo, :fill, 350, 350, format: "png") %>
  </br>
    <div class="checkoutlist">
     <ul>
