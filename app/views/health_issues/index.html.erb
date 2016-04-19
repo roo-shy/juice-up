@@ -1,15 +1,16 @@
 <div class="container">
     <div class="row">
       <div class="col-lg-12">
+        <h1 style="color: #333333;">Choose What Bothers You</h1>
+      <hr>
         <%= form_tag(juices_path, :method => "get", enforce_utf8: false, id: "search-form") do %>
         <div class="issuescontainer">
           <% @health_issues.each do |health_issue| %>
-          <div class="plusicon">
-            <p style="font-size:30px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></p>
-          </div>
-          <div class="issues">
+           <div class="issues">
+            <div class="checkbox">
             <%= image_tag attachment_url(health_issue, :photo, :fill, 200, 200, format: "") %></br>
-            <%= check_box_tag "juice_id-#{health_issue.id}", false, params[:health_issue_id], html: { placeholder: "Search Juices"} %>
+            <%= check_box_tag "juice_id-#{health_issue.id}", false, params[:health_issue_id], html: { placeholder: "Search Juices"}, :class => "toggle" %>
+            </div>
             <%= health_issue.name %>
           </div>
           <% end %>
