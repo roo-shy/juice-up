@@ -1,7 +1,10 @@
 class JuicesController < ApplicationController
   before_action :authenticate_user!
     def index
+      # @health_issues = HealthIssue.all
+      # @health_issues = HealthIssue.find_by id: params[:id]
       # @juices = Juice.all
+      # @health_issues = @juices.health_issues.map {|hi| j.juice}.map {|hi| j.health_issues}.flatten
       health_issue_ids_list = []
 
       params.each do |k,v|

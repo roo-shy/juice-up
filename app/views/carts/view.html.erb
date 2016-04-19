@@ -42,14 +42,14 @@
 
       <% end %>
       <% end %>
-
+    </br>
+    <%= link_to 'Continue Shopping', juices_path%>
+    </br>
     </div>
     <% end %>
   </div>
-</br>
 
-</br>  <%= link_to 'Continue Shopping', juices_path%>
-   <hr>
+  <hr>
   <div class="col-xs-12">
   <div id="mapid"></div>
    <script type="text/javascript">
@@ -58,14 +58,14 @@
      L.Icon.Default.imagePath = "/assets";
      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-       maxZoom: 12,
+       maxZoom: 14,
        id: 'rooshy.pm83lnj3',
        accessToken: 'pk.eyJ1IjoiandvLWNpbmsiLCJhIjoiQVBfcW9OOCJ9.k2Q4vbfJs16Idk2cOziQYQ'
    }).addTo(mymap);
      <% @juicebars.each do |juicebar| %>
        L.marker([<%= juicebar.latitude %>, <%= juicebar.longitude %>]).addTo(mymap)
-         .bindPopup('<b><%= juicebar.location %></b><br/><%= link_to 'View Juicebar', juicebars_path(id: juicebar.id ), class: "btn btn-default btn-block" %>');
-     <% end %>
+       .bindPopup('<b><%= juicebar.location %></b><br/><br/><%= image_tag attachment_url(juicebar, :photo, :fill, 250, 150, format: "png"), class: "img-responsive" %>');
+   <% end %>
    })
    </script>
 </div>

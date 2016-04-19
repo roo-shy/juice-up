@@ -84,11 +84,11 @@ Remedy.create juice_id: j5.id,
 Remedy.create juice_id: j5.id,
                       health_issue_id: joints.id
 
-jb1 = Juicebar.create name:"Flow Juice Bar", location: "214 Fairview St, Houston, TX 77006"
-jb2 = Juicebar.create name:"1-3 Day Juice Cleanses", location: "3030 Travis St, Houston, TX 77006"
-jb3 = Juicebar.create name:"Beet Box Blend Bar", location: "Bakery Square, 1909 W Gray St, Houston, TX 77019"
-jb4 = Juicebar.create name:"Squeezed Juice", location: "Houston Center, 1200 McKinney St, Houston, TX 77002"
-jb5 = Juicebar.create name:"Fuel Kitchen and Health Bar", location: "1005 Waugh Dr, Houston, TX 77019"
+jb1 = Juicebar.create name:"Flow Juice Bar", location: "214 Fairview St, Houston, TX 77006", photo_id: upload_image('flow').id
+jb2 = Juicebar.create name:"1-3 Day Juice Cleanses", location: "3030 Travis St, Houston, TX 77006", photo_id: upload_image('1-3day').id
+jb3 = Juicebar.create name:"Beet Box Blend Bar", location: "Bakery Square, 1909 W Gray St, Houston, TX 77019", photo_id: upload_image('beetjb').id
+jb4 = Juicebar.create name:"Squeezed Juice", location: "Houston Center, 1200 McKinney St, Houston, TX 77002", photo_id: upload_image('squeezedjb').id
+jb5 = Juicebar.create name:"Fuel Kitchen and Health Bar", location: "1005 Waugh Dr, Houston, TX 77019", photo_id: upload_image('fuel').id
 
 Juice.find(9).juicebars << Juicebar.find(5)
 Juice.find(12).juicebars << Juicebar.find(5)

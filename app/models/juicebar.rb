@@ -4,4 +4,6 @@ class Juicebar < ActiveRecord::Base
   after_validation :geocode
 
   validates :name, :location, presence: true
+
+  attachment :photo
 end

@@ -1,18 +1,21 @@
-
 <div class="health_container">
   <div class="row">
+    <h1 style="color: #333333;">Pick Your Juice</h1>
       <div class="juicescontainer">
-        <% @juices.each do |juice| %>
-        <div class="juices">
+      <% @juices.each do |juice| %>
+      <div class="juices">
           <h3><%= link_to juice.name, juice_path(id: juice.id) %></h3>
           <%= image_tag attachment_url(juice, :photo, :fill, 350, 350, format: "png") %>
+        </br>
+          <strong><%= juice.health_issues.pluck(:name).join %></strong>
+          </br>
           </br>
           <%= juice.description %>
         </br></br>
           <p style="font-size: 16px;"><strong><%= number_to_currency(juice.price) %></strong>&nbsp&nbsp&nbsp&nbsp<%= link_to 'Add to Cart', add_to_cart_path(juice_id: juice.id), class: "btn", class: "btn btn-warning", method: :post %></p>
-
-        </div>
+       </div>
         <% end %>
+
       </div>
     </div>
   </div>
