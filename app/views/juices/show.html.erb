@@ -6,6 +6,7 @@
         <div class="imageprice", style="width: 350px;">
         <%= image_tag attachment_url(@juice, :photo, :fill, 350, 350, format: "png") %>
       </br>
+      <strong><%= @juice.health_issues.pluck(:name).join %></strong>
       <p><%= @juice.description %></p>
           <p style="font-size: 16px;"><strong><%= number_to_currency(@juice.price) %></strong>&nbsp&nbsp&nbsp&nbsp<%= link_to 'Add to Cart', add_to_cart_path(juice_id: @juice.id), class: "btn", class: "btn btn-warning", method: :post %></p>
        </div>
@@ -25,7 +26,7 @@
            }).addTo(mymap);
              <% @juice.juicebars.each do |juicebar| %>
                L.marker([<%= juicebar.latitude %>, <%= juicebar.longitude %>]).addTo(mymap)
-                 .bindPopup('<b><%= juicebar.location %></b><br/><%= link_to 'View Juicebar', juicebars_path(id: juicebar.id ), class: "btn btn-default btn-block" %>');
+                 .bindPopup('<b><%= juicebar.location %></b><br/><br/><%= image_tag attachment_url(juicebar, :photo, :fill, 250, 150, format: "png"), class: "img-responsive" %>');
              <% end %>
            })
            </script>
