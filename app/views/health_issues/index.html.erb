@@ -7,10 +7,8 @@
         <div class="issuescontainer">
           <% @health_issues.each do |health_issue| %>
            <div class="issues">
-            <div class="checkbox">
-            <%= image_tag attachment_url(health_issue, :photo, :fill, 200, 200, format: "") %></br>
-            <%= check_box_tag "juice_id-#{health_issue.id}", false, params[:health_issue_id], html: { placeholder: "Search Juices"}, :class => "toggle" %>
-            </div>
+            <%= check_box_tag "juice_id-#{health_issue.id}", false, params[:health_issue_id], html: { placeholder: "Search Juices"}, :class => "checkbox", :id =>"cb1", :name =>"img1" %>
+            <%=label_tag {image_tag(attachment_url(health_issue, :photo, :fill, 200, 200, format: ""))}%></br>
             <%= health_issue.name %>
           </div>
           <% end %>
