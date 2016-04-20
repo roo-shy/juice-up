@@ -7,9 +7,12 @@
       <% end %>
     </ul>
     <% end %>
+    <div class="image">
+      <%= image_tag 'juice_bg-01.jpg',class: 'img-responsive' %>
+  </div>
       <div class="col-xs-4">
     <div class="signin">
-      <h1>Sign Up</h1>
+      <h1 style="font-family: 'Francois One', sans-serif;">Sign Up</h1>
       <%= form_for @user do |f| %>
       <div class="form-group">
         <%= f.label :name %>
@@ -30,10 +33,5 @@
         <%= f.submit class: "btn btn-warning" %>
       </div>
       <% end %>
-    </div>
-  </div>
-  <div class="col-xs-12">
-    <div class="image">
-      <%= image_tag 'juice_bg-01.jpg', style:"border-style: hidden;",  class: 'img-responsive' %>
     </div>
   </div>

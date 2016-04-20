@@ -1,3 +1,19 @@
-// Place all the styles related to the session controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1{
+  font-family: 'Francois One', sans-serif;
+}
+
+.image{
+  margin-top:-20px;
+  position:relative;
+
+}
+
+.signin{
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  margin-top: -900px;
+  padding-right: 100px;
+  z-index: 3;
+}

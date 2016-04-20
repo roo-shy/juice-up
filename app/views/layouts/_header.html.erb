@@ -30,9 +30,9 @@
          </ul>
          <ul class="nav navbar-nav navbar-right">
            <% if @current_user %>
-              <li><%= link_to "Sign Out", sign_out_path, class: "button"%><span class="glyphicon glyphicon-user" aria-hidden="true"></span></li>
+              <li><%= link_to sign_out_path do %><span class="glyphicon glyphicon-off" aria-hidden="true"></span><% end %></li>
               <% else %>
-              <li><%= link_to "Sign In", sign_in_path, class: "button" %><span class="glyphicon glyphicon-log-in"></span></li>
+              <li><%= link_to sign_in_path do %><span class="glyphicon glyphicon-log-in"></span><% end %></li>
               <% end %>
          </ul>
        </div>

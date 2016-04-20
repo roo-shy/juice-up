@@ -1,7 +1,6 @@
-<div class="container">
+
   <div class="row">
-      <div class="col-xs-12">
-        <h4><%= @current_user.name %>'s cart</h4>
+        <h1 style="font-family: 'Francois One', sans-serif; color: #666666; margin-left:30px;"><%= @current_user.name %>'s cart</h1>
           <hr>
   <div class="juicescontainer">
     <% if @order %>
@@ -17,41 +16,39 @@
     </br>
       <li><%= link_to 'Remove', remove_from_cart_path(juice_id: order_item.juice_id), method: :delete, class: "btn btn-danger"%></li>
     </ul>
+    <h4 style="font-family: 'Francois One', sans-serif; color: #666666; margin-left:40px;">Order Total:
+      <%= number_to_currency @order.total_price %></h4></br>
+      <div class="buybt">
+        <% if @order.order_items.present? %>
+        <%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
+
+        <script
+          src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="pk_test_LCoIGMP5jXdesNt7Wyoh5pSL"
+          data-name="Juice App"
+          data-description="<%= @order.description %>"
+          data-amount="<%= @order.total_price_in_cents %>"
+          data-email="<%= @current_user.email %>"
+          data-shipping-address="true"
+          data-locale="auto">
+        </script>
+
+        <% end %>
+        <% end %>
+      </br>
+      </div>
   </div>
+
     </div>
     <% end %>
+    <% end %>
+    <div class="mapcolumn">
+      <div id="mapid"></div>
     </div>
-   <hr>
-    <h4>Order Total:
-      <%= number_to_currency @order.total_price %></h4>
-    <div class="">
-      <% if @order.order_items.present? %>
-      <%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
-
-      <script
-        src="https://checkout.stripe.com/checkout.js"
-        class="stripe-button"
-        data-key="pk_test_LCoIGMP5jXdesNt7Wyoh5pSL"
-        data-name="Juice App"
-        data-description="<%= @order.description %>"
-        data-amount="<%= @order.total_price_in_cents %>"
-        data-email="<%= @current_user.email %>"
-        data-shipping-address="true"
-        data-locale="auto">
-      </script>
-
-      <% end %>
-      <% end %>
-    </br>
     <%= link_to 'Continue Shopping', juices_path%>
-    </br>
     </div>
-    <% end %>
-  </div>
 
-  <hr>
-  <div class="col-xs-12">
-  <div id="mapid"></div>
    <script type="text/javascript">
    $(window).ready(function(){
      var mymap = L.map('mapid').setView([29.73, -95.39], 10);
@@ -68,7 +65,4 @@
    <% end %>
    })
    </script>
-</div>
-</div>
-</div>
 </div>
