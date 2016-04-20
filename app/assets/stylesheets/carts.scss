@@ -1,5 +1,7 @@
-
-#mapid { height: 450px; width:1000px; }
+.mapcolumn{
+ margin-right: 100px;
+ #mapid { height: 350px; width:450px; }
+}
 
 .leaflet-marker-shadow {
   border:none;
@@ -11,8 +13,13 @@
 
 .imageprice {
   margin-right: 30px;
+  padding:10px;
 }
 
 .checkoutlist{
   margin-left:-40px;
+}
+
+.buybt{
+  margin-left: 40px;
 }

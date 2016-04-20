@@ -1,13 +1,14 @@
-<div class="health_container">
+
   <div class="row">
-    <h1 style="color: #333333;">Pick Your Juice</h1>
+    <h1 style="font-family: 'Francois One', sans-serif; color: #666666; margin-left:30px;">Pick Your Juice</h1>
+    <hr>
       <div class="juicescontainer">
       <% @juices.each do |juice| %>
       <div class="juices">
           <h3><%= link_to juice.name, juice_path(id: juice.id) %></h3>
           <%= image_tag attachment_url(juice, :photo, :fill, 350, 350, format: "png") %>
         </br>
-          <strong><%= juice.health_issues.pluck(:name).join %></strong>
+          <strong><%= juice.health_issues.pluck(:name).join%></strong>
           </br>
           </br>
           <%= juice.description %>
@@ -18,4 +19,3 @@
 
       </div>
     </div>
-  </div>

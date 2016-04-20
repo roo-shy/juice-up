@@ -1,28 +1,24 @@
-
-<div class="container">
-  <div class="row">
-      <div class="col-xs-12">
-        <h4>Thank you for your purchase  <%= @order.id%></h4>
+ <div class="row">
+        <h1 style="font-family: 'Francois One', sans-serif; color: #666666; margin-left:30px;">Thank you for your purchase <%= @order.id%></h1>
+        <hr>
       <div class="juicescontainer">
        <% @order.order_items.each do |order_item| %>
         <div class="imageprice">
-        <%= image_tag attachment_url(order_item.juice, :photo, :fill, 440, 440, format: "png") %>
+        <%= image_tag attachment_url(order_item.juice, :photo, :fill, 350, 350, format: "png") %>
         </br>
         <div class="checkoutlist">
          <ul>
-         <li><strong>Purchase Date</strong>:<%= local_time(@order.purchased_at) %></li>
-          <li>Order ID: <%= @order.id %></li>
-          <li>Title:  <%= order_item.juice.name %></li>
-          <li>Quantity:  <%= order_item.quantity %></li>
-          <li>Total Price:  <%= number_to_currency order_item.total_price %></li>
+         <li><b>Purchase Date</b>:<%= local_time(@order.purchased_at) %></b></li>
+          <li><b>Order ID: <%= @order.id %></b></li>
+          <li><b>Title:  <%= order_item.juice.name %></b></li>
+          <li><b>Quantity:  <%= order_item.quantity %></b></li>
+          <li><b>Total Price:  <%= number_to_currency order_item.total_price %></b></li>
           </ul>
           </div>
           <%= link_to 'View More', juices_path, class: "btn btn-warning" %>
             </div>
+
           <% end %>
-
-
-      </div>
-      </div>
+        </div>
+        </br>
     </div>
-  </div>

@@ -2,11 +2,13 @@
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 30px;
 }
 
 .issues{
   padding: 40px;
   margin: 10px;
+  background: #dddddd;
 }
 
 input[type="check_box_tag"][id^="cb"] {
