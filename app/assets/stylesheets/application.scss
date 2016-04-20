@@ -18,6 +18,17 @@ ul {
 
 .navbar-inverse {
   background-color:#000000;
+  padding: 10px;
+}
+
+.navbar-nav>li>a{
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.logo{
+  margin-top: 15px;
+  margin-right: 30px;
 }
 
 .navbar-brand{
