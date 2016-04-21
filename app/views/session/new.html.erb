@@ -1,21 +1,22 @@
 <div class="image">
   <%= image_tag 'juice_bg-01.jpg',  class: 'img-responsive' %>
-</div>
-<div class="col-lg-4">
-   <div class="signin">
-      <h1 style="font-family: 'Francois One', sans-serif;">Sign In</h1>
-    <%= form_tag do %>
-        <div class="form-group">
-          <%= text_field_tag :email, placeholder="Email", style: "color:#666666"; %>
-        </div>
-        <div class="form-group">
-          <%= password_field_tag :password, placeholder="Password", style: "color:#666666"; %>
-        </div>
-        <div class="">
-        <%= submit_tag "Sign In", class: "btn btn-warning" %></br></br>
 
-        <p><b> New User</b> <%= link_to 'Sign Up', new_user_path %></p>
-       </div>
-      <% end %>
-  </div>
+  <div class="col-lg-4">
+     <div class="signin1">
+        <h1 style="font-family: 'Francois One', sans-serif;">Sign In</h1>
+      <%= form_tag do %>
+          <div class="form-group">
+            <%= text_field_tag :email, placeholder="Email", style: "color:#666666"; %>
+          </div>
+          <div class="form-group">
+            <%= password_field_tag :password, placeholder="Password", style: "color:#666666"; %>
+          </div>
+          <div class="">
+          <%= submit_tag "Sign In", class: "btn btn-warning" %></br></br>
+
+          <p><b> New User</b> <%= link_to 'Sign Up', new_user_path %></p>
+         </div>
+        <% end %>
+    </div>
+</div>
 </div>

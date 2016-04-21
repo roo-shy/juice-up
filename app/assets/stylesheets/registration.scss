@@ -10,8 +10,14 @@ h1{
 .signin{
   display: flex;
   flex-direction: column;
-  position:absolute;
-  margin-top: -800px;
-  padding-right: 100px;
+  position:relative;
   z-index: 3;
+  top:50px;
+  left:50px;
+}
+
+.col-lg-4{
+  position: absolute;
+  top:95px;
+  left:50px;
 }
