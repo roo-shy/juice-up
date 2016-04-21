@@ -16,5 +16,4 @@
 //= require react
 //= require react_ujs
 //= require components
-//= require leaflet
 //= require_tree .
