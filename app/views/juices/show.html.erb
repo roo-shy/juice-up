@@ -1,12 +1,11 @@
-
-    <div class="row">
+   <div class="row">
         <h2 style="font-family: 'Francois One', sans-serif; color: #666666; margin-left:45px;"><%= @juice.name%></h2>
       <hr>
       <div class="juicescontainer">
         <div class="imageprice", style="width: 350px;">
         <%= image_tag attachment_url(@juice, :photo, :fill, 350, 350, format: "png") %>
       </br>
-        <p style="font-size:15px;"><span class="label label-default"><%= juice.health_issues.pluck(:name).join(", ")%></span></p>
+        <p style="font-size:15px;"><span class="label label-default"><%= @juice.health_issues.pluck(:name).join(", ")%></span></p>
     </br>
       <p><%= @juice.description %></p>
           <p style="font-size: 16px;"><strong><%= number_to_currency(@juice.price) %></strong>&nbsp&nbsp&nbsp&nbsp<%= link_to 'Add to Cart', add_to_cart_path(juice_id: @juice.id), class: "btn", class: "btn btn-warning", method: :post %></p>
