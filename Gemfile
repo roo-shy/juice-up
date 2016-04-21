@@ -56,7 +56,7 @@ end
   gem 'font-awesome-sass'
   gem "refile", require: "refile/rails"
   gem "refile-mini_magick"
-  gem 'refile-postgres'
+  gem 'refile-postgres', '1.2'
   gem 'stripe'
   gem 'local_time'
   gem 'geocoder'
