@@ -7,8 +7,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js" %>
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
   <script type="text/javascript" src=" https://checkout.stripe.com/checkout.js"></script>
 </head>
