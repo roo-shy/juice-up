@@ -1,4 +1,3 @@
-
     <nav class="navbar navbar-inverse">
      <div class="container-fluid">
        <div class="navbar-header">
@@ -12,9 +11,9 @@
        <div class="collapse navbar-collapse" id="myNavbar">
          <ul class="nav navbar-nav">
             <li <% if current_page?(root_path) -%>class="active"<% end -%>>
-           <%= link_to root_path do %><span class="glyphicon glyphicon-apple"></span>&nbsp;Juice<% end %></li>
+           <%= link_to root_path do %><span class="glyphicon glyphicon-heart"></span>&nbsp;Body<% end %></li>
            <li <% if current_page?(juices_path) -%>class="active"<% end -%>>
-             <%= link_to juices_path do %><span class="glyphicon glyphicon-heart"></span>&nbsp;Body <% end %></li>
+             <%= link_to juices_path do %><span class="glyphicon glyphicon-apple"></span>&nbsp;Juice <% end %></li>
            </li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
