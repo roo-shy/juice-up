@@ -2,13 +2,13 @@
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 30px;
+  padding: 20px;
 }
 
 .issues{
   padding: 40px;
   margin: 10px;
-  background: #dddddd;
+  border: 1px solid #dddddd;
 }
 
 input[type="checkbox"][id^="juice_id-"] {
@@ -16,7 +16,6 @@ input[type="checkbox"][id^="juice_id-"] {
 }
 
 label {
-  border: 1px solid #fff;
   padding: 10px;
   display: block;
   position: relative;
