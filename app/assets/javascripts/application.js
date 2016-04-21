@@ -18,4 +18,4 @@
 //= require components
 //= require_tree .
 
-//= require leaflet.js
+//= require leaflet
