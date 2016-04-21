@@ -21,18 +21,17 @@
        </div>
        <div class="collapse navbar-collapse" id="myNavbar">
          <ul class="nav navbar-nav">
-           <li <% if current_page?(root_path) -%>class="active"<% end -%>>
-             <%= link_to "Body", root_path %>
-           </li>
+            <li <% if current_page?(root_path) -%>class="active"<% end -%>>
+           <%= link_to root_path do %><span class="glyphicon glyphicon-apple"></span>&nbsp;Juice<% end %></li>
            <li <% if current_page?(juices_path) -%>class="active"<% end -%>>
-             <%= link_to "Juice", juices_path %>
+             <%= link_to juices_path do %><span class="glyphicon glyphicon-heart"></span>&nbsp;Body <% end %></li>
            </li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
            <% if @current_user %>
-              <li><%= link_to sign_out_path do %><span class="glyphicon glyphicon-off" aria-hidden="true"></span><% end %></li>
+              <li><%= link_to sign_out_path do %><span class="glyphicon glyphicon-off"></span>&nbsp;Log Out<% end %></li>
               <% else %>
-              <li><%= link_to sign_in_path do %><span class="glyphicon glyphicon-log-in"></span><% end %></li>
+              <li><%= link_to sign_in_path do %><span class="glyphicon glyphicon-log-in"></span>&nbsp; Log In<% end %></li>
               <% end %>
          </ul>
        </div>

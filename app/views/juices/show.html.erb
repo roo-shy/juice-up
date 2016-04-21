@@ -27,7 +27,7 @@
            }).addTo(mymap);
              <% @juice.juicebars.each do |juicebar| %>
                L.marker([<%= juicebar.latitude %>, <%= juicebar.longitude %>]).addTo(mymap)
-                 .bindPopup('<b><%= juicebar.location %></b><br/><br/><%= image_tag attachment_url(juicebar, :photo, :fill, 250, 150, format: "png"), class: "img-responsive" %>');
+                 .bindPopup('<b><%= juicebar.location %></b><br/><br/><%= image_tag attachment_url(juicebar, :photo, :fill, 180, 150, format: "png"), class: "img-responsive" %>');
              <% end %>
            })
            </script>
