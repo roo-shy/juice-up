@@ -8,7 +8,7 @@
           <h3><%= link_to juice.name, juice_path(id: juice.id) %></h3>
           <%= image_tag attachment_url(juice, :photo, :fill, 350, 350, format: "png") %>
         </br>
-          <strong><%= juice.health_issues.pluck(:name).join%></strong>
+          <strong><%= juice.health_issues.pluck(:name).join(", ")%></strong>
           </br>
           </br>
           <%= juice.description %>
