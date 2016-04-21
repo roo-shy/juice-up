@@ -18,30 +18,30 @@
     </ul>
     <hr>
   </div>
-  <div class="total_price">
- <h4 style="font-family: 'Francois One', sans-serif; color: #666666; ">Order Total:
-  <%= number_to_currency @order.total_price %></h4>
-
-    <% if @order.order_items.present? %>
-    <%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
-    <script
-      src="https://checkout.stripe.com/checkout.js"
-      class="stripe-button"
-      data-key="pk_test_LCoIGMP5jXdesNt7Wyoh5pSL"
-      data-name="Juice Up"
-      data-amount="<%= @order.total_price_in_cents %>"
-      data-email="<%= @current_user.email %>"
-      data-shipping-address="true"
-      data-locale="auto">
-    </script>
-
-    <% end %>
-    <% end %>
-
-    </div>
    </div>
    <% end %>
     <% end %>
+      <div class="total_price">
+     <h4 style="font-family: 'Francois One', sans-serif; color: #666666; ">Order Total:
+      <%= number_to_currency @order.total_price %></h4>
+
+        <% if @order.order_items.present? %>
+        <%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
+        <script
+          src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="pk_test_LCoIGMP5jXdesNt7Wyoh5pSL"
+          data-name="Juice Up"
+          data-amount="<%= @order.total_price_in_cents %>"
+          data-email="<%= @current_user.email %>"
+          data-shipping-address="true"
+          data-locale="auto">
+        </script>
+
+        <% end %>
+        <% end %>
+
+        </div>
 
     <div class="mapcolumn">
       <div id="mapid"></div>
