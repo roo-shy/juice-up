@@ -5,20 +5,15 @@ h1{
 .image{
   margin-top:-20px;
   background-size: cover;
-  position: absolute;
 
 }
-
 // .wrapper{
 //   background: url(image-path('juice_bg-01.jpg'));
 //
 // }
-
 .signin{
-  display: flex;
-  flex-direction: column;
-  top: 250px;
-  left:100px;
+  top: 100px;
+  left: 100px;
   z-index: 3;
   position: absolute;
 }

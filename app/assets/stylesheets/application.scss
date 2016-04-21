@@ -33,7 +33,6 @@ ul {
 }
 
 
-
 img{
   display: flex;
   flex-direction: row;
@@ -71,6 +70,9 @@ img{
      font-size: 16px;
      .center-tagline {
        font-size: 36px;
+       .signin{
+         top: 800px;
+       }
      }
    }
  }
