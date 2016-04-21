@@ -3,10 +3,9 @@ h1{
 }
 
 .image{
+  margin-top:-20px;
   background-size: cover;
   position: absolute;
-  top:0;
-  right:0;
 
 }
 
@@ -20,17 +19,10 @@ h1{
   flex-direction: column;
   top: 250px;
   left:100px;
-  z-index: 9;
+  z-index: 3;
   position: absolute;
-}
-
-.logincontainer{
-  
 }
 
 .col-lg-4{
   position: absolute;
-  top:-100px;
-  left:20px;
-  z-index:3;
 }
