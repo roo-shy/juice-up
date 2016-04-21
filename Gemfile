@@ -2,9 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-group :production do
-  gem 'rails_12factor'
-end
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
