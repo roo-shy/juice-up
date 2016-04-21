@@ -13,14 +13,16 @@
       <li><strong>Quantity:</strong>  <%= order_item.quantity %></li>
       <li><strong>Total Price:</strong>  <%= number_to_currency order_item.total_price %></li>
     </br>
-      <li><%= link_to 'Remove', remove_from_cart_path(juice_id: order_item.juice_id), method: :delete, class: "btn btn-danger"%></li>
+      <li><%= link_to 'Remove', remove_from_cart_path(juice_id: order_item.juice_id), method: :delete, class: "btn btn-danger"%></li></br>
+      <li><%= link_to 'Continue Shopping', juices_path, class: "btn btn-warning" %></li>
     </ul>
+    </br>
+    <hr>
     <h4 style="font-family: 'Francois One', sans-serif; color: #666666; margin-left:40px;">Order Total:
-      <%= number_to_currency @order.total_price %></h4></br>
+      <%= number_to_currency @order.total_price %></h4>
       <div class="buybt">
         <% if @order.order_items.present? %>
         <%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
-
         <script
           src="https://checkout.stripe.com/checkout.js"
           class="stripe-button"
@@ -44,7 +46,6 @@
     <div class="mapcolumn">
       <div id="mapid"></div>
     </div>
-    <%= link_to 'Continue Shopping', juices_path%>
     </div>
 
    <script type="text/javascript">
