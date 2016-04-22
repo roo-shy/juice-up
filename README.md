@@ -9,4 +9,4 @@
 
 #Usage
 
-Juice Me app will allow users to submit an interactive online form. As soon you submit a form you would see a list of recipes that only unique to you and your concerns. On the same page you would select a store located close to you. The paymnet method will be executed via Stripe. The selected store then would receive your IP location and estimate when your fresh juice will be ready.
+Juice Up allows the user to target health benefits by the glass. Need some energy? Do you have digestion, pulmonary/ vascular health or bone density issues? Juice Up will point the way to the closest glass of raw organic goodness in the form of fresh made juice. Juice Up’s mapping feature will pinpoint the nearest juice bar for your  convenience. Juice Up also allows you to order a juice online from your favorite juice bar and have it ready for pick up. Now there is no excuse to go without juice! Juice Up! 
