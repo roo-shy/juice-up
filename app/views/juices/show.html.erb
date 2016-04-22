@@ -8,6 +8,7 @@
         <p style="font-size:15px;"><span class="label label-default"><%= @juice.health_issues.pluck(:name).join(", ")%></span></p>
       <%= @juice.description %>
       </br>
+        </br>
           <p style="font-size: 16px;"><strong><%= number_to_currency(@juice.price) %></strong>&nbsp&nbsp&nbsp&nbsp<%= link_to 'Add to Cart', add_to_cart_path(juice_id: @juice.id), class: "btn", class: "btn btn-warning", method: :post %></p>
        </div>
         <div class="mapcolumn">
