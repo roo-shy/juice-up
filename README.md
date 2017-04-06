@@ -1,6 +1,6 @@
 # juice_me_app
 
-###Features
+### Features
  * gem “leaflet-js” - leafletjs.com
  * stripe API - https://stripe.com/
  * ruby geocoder - http://www.rubygeocoder.com/
